@@ -7,12 +7,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 import java.text.ParseException;
-
 
 
 public class SignUpActivity extends Activity {
@@ -26,8 +26,7 @@ public class SignUpActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
-        setUpButtons();
+        //setUpButtons();
     }
 
 
@@ -54,36 +53,42 @@ public class SignUpActivity extends Activity {
     }
 
     private void setUpButtons() {
-        registerButton = (Button) findViewById(R.id.register_button);
+        registerButton = (Button) findViewById(R.id.signup_button);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               EditText textPerson_editText = (EditText) findViewById(R.id.textPerson_editText);
-               textPerson = textPerson_editText.getText().toString();
-               EditText textPassword_editText2 = (EditText) findViewById(R.id.textPassword_editText2);
-               password= textPassword_editText2.getText().toString();
-               EditText email_editText = (EditText) findViewById(R.id.email_editText);
-               emailname = email_editText.getText().toString();
-               EditText phone_editText = (EditText) findViewById(R.id.phone_editText);
-               phonenumber = phone_editText.getText().toString();
-
-               createUser();
+                EditText textPerson_editText = (EditText) findViewById(R.id.textPerson_editText);
+                textPerson = textPerson_editText.getText().toString();
+                EditText textPassword_editText2 = (EditText) findViewById(R.id.textPassword_editText2);
+                password = textPassword_editText2.getText().toString();
+                EditText textPassword_editText3 = (EditText) findViewById(R.id.textPassword_editText3);
+                String password2 = textPassword_editText3.getText().toString();
+                EditText email_editText = (EditText) findViewById(R.id.email_editText);
+                emailname = email_editText.getText().toString();
+                EditText phone_editText = (EditText) findViewById(R.id.phone_editText);
+                phonenumber = phone_editText.getText().toString();
+                
+                if (password.equals(password2)) {
+                    createUser();
+                } else {
+                    TextView textView = (TextView)findViewById(R.id.password_confirmation);
+                    textView.setText("Passwords do not match");
+                }
             }
-               });
+
+        });
 
 
+        }
 
-
-    }
-
-    private void createUser(){
+    private void createUser() {
         ParseUser user = new ParseUser();
         user.setUsername(textPerson);
         user.setPassword(password);
         user.setEmail(emailname);
         user.put("phone", phonenumber);
         user.put("location", null);
-        SignUpCallback x = new SignUpCallback() {
+        user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(com.parse.ParseException e) {
                 if (e == null) {
@@ -93,13 +98,10 @@ public class SignUpActivity extends Activity {
                     // to figure out what went wrong
                 }
             }
-        };
-
+        });
 
 
     }
-
-
 
 
 }

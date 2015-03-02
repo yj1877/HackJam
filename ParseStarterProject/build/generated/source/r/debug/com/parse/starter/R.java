@@ -24,9 +24,9 @@ public final class R {
         public static final int password_confirmation=0x7f070005;
         public static final int password_editText=0x7f070009;
         public static final int phone_editText=0x7f070006;
-        public static final int registerButton_editText=0x7f070007;
         public static final int register_button=0x7f07000b;
         public static final int signup=0x7f070000;
+        public static final int signup_button=0x7f070007;
         public static final int textPassword_editText2=0x7f070002;
         public static final int textPassword_editText3=0x7f070003;
         public static final int textPerson_editText=0x7f070001;

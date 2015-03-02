@@ -26,19 +26,19 @@ public class ParseStarterProjectActivity extends Activity {
         testObject.saveInBackground();
 		ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
-        setUpButtons();
-    }
 
-    private void setUpButtons() {
+
+
         registerButton = (Button) findViewById(R.id.register_button);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setUpUserName();
+                Intent intent = new Intent(ParseStarterProjectActivity.this, SignUpActivity.class);
+                ParseStarterProjectActivity.this.startActivity(intent);
             }
         });
 
-        loginButton = (Button) findViewById(R.id.register_button);
+        loginButton = (Button) findViewById(R.id.login_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,13 +48,16 @@ public class ParseStarterProjectActivity extends Activity {
                 password = password_editText.getText().toString();
             }
         });
+    }
+
+    private void setUpButtons() {
+
 
 
     }
     // goes to SignUpActivity,
     private void setUpUserName(){
-        Intent intent = new Intent(this, SignUpActivity.class);
-        startActivity(intent);
+
     }
 
 
