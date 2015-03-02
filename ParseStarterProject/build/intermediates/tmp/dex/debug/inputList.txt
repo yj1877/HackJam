@@ -1,0 +1,4 @@
+/Users/trizzle21/Documents/hackjam2015/HackJam/ParseStarterProject/build/intermediates/classes/debug
+/Users/trizzle21/Documents/hackjam2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-e93eebb0518bbf906fefd28e23241f0bc879aba1.jar
+/Users/trizzle21/Documents/hackjam2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.8.2-159a7d07faf2e7952c1d93c961a058cb83902f52.jar
+/Users/trizzle21/Documents/hackjam2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.8.2-13b747a7718f93907c88f7f13f6bbcbc383c2477.jar
