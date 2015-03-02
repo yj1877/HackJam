@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/Users/trizzle21/Documents/hackjam2015/HackJam/ParseStarterProject/res/menu/menu_match.xml -->
+<!-- From: file:/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/res/menu/menu_match.xml -->
