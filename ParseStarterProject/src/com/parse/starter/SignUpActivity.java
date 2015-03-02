@@ -73,8 +73,8 @@ public class SignUpActivity extends Activity {
                 if (password.equals(password2)) {
                     createUser();
                 } else {
-                    TextView textView = (TextView)findViewById(R.id.password_confirmation);
-                    textView.setText("Passwords do not match");
+                    Toast.makeText(getApplicationContext(), "Passwords do not match.", Toast.LENGTH_SHORT).show();
+
                 }
             }
 

@@ -61,8 +61,7 @@ public class ParseStarterProjectActivity extends Activity {
                             startActivity(intent);
                         }
                         else {
-                            TextView textView = (TextView)findViewById(R.id.login_textView);
-                            textView.setText("Incorrect Username/Password");
+                            Toast.makeText(getApplicationContext(), "Incorrect Username/Password", Toast.LENGTH_SHORT).show();;
                         }
                     }
                 });
