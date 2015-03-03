@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.parse'
 
 buildscript {
-  repositories {
-    mavenCentral()
-    maven { url 'https://maven.parse.com/repo' }
-  }
-  dependencies {
-    classpath 'com.parse.tools:gradle:1.+'
-  }
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.parse.com/repo' }
+    }
+    dependencies {
+        classpath 'com.parse.tools:gradle:1.+'
+    }
 }
 
 repositories {
@@ -17,6 +17,8 @@ repositories {
 
 dependencies {
     compile 'com.parse.bolts:bolts-android:1.1.4'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile fileTree(dir: 'libs', include: 'commons-jexl-*.jar')
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
 }
@@ -38,13 +40,3 @@ android {
         }
     }
 }
-
-/* Uncomment if you enable ProGuard and you want to automatically upload symbols on build.
-parse {
-  applicationId YOUR_APPLICATION_ID
-  masterKey YOUR_MASTER_KEY
-
-  // Make symbol upload automatic. Otherwise, use e.g. ../gradlew parseUploadSymbolsDebug;
-  uploadSymbols true
-}
-*/

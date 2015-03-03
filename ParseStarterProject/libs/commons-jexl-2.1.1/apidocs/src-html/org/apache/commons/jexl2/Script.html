@@ -1,0 +1,173 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    /*<a name="line.1"></a>
+<FONT color="green">002</FONT>     * Licensed to the Apache Software Foundation (ASF) under one or more<a name="line.2"></a>
+<FONT color="green">003</FONT>     * contributor license agreements.  See the NOTICE file distributed with<a name="line.3"></a>
+<FONT color="green">004</FONT>     * this work for additional information regarding copyright ownership.<a name="line.4"></a>
+<FONT color="green">005</FONT>     * The ASF licenses this file to You under the Apache License, Version 2.0<a name="line.5"></a>
+<FONT color="green">006</FONT>     * (the "License"); you may not use this file except in compliance with<a name="line.6"></a>
+<FONT color="green">007</FONT>     * the License.  You may obtain a copy of the License at<a name="line.7"></a>
+<FONT color="green">008</FONT>     *<a name="line.8"></a>
+<FONT color="green">009</FONT>     *      http://www.apache.org/licenses/LICENSE-2.0<a name="line.9"></a>
+<FONT color="green">010</FONT>     *<a name="line.10"></a>
+<FONT color="green">011</FONT>     * Unless required by applicable law or agreed to in writing, software<a name="line.11"></a>
+<FONT color="green">012</FONT>     * distributed under the License is distributed on an "AS IS" BASIS,<a name="line.12"></a>
+<FONT color="green">013</FONT>     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<a name="line.13"></a>
+<FONT color="green">014</FONT>     * See the License for the specific language governing permissions and<a name="line.14"></a>
+<FONT color="green">015</FONT>     * limitations under the License.<a name="line.15"></a>
+<FONT color="green">016</FONT>     */<a name="line.16"></a>
+<FONT color="green">017</FONT>    package org.apache.commons.jexl2;<a name="line.17"></a>
+<FONT color="green">018</FONT>    <a name="line.18"></a>
+<FONT color="green">019</FONT>    import java.util.List;<a name="line.19"></a>
+<FONT color="green">020</FONT>    import java.util.Set;<a name="line.20"></a>
+<FONT color="green">021</FONT>    import java.util.concurrent.Callable;<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>    /**<a name="line.23"></a>
+<FONT color="green">024</FONT>     * &lt;p&gt;A JEXL Script.&lt;/p&gt;<a name="line.24"></a>
+<FONT color="green">025</FONT>     * &lt;p&gt;A script is some valid JEXL syntax to be executed with<a name="line.25"></a>
+<FONT color="green">026</FONT>     * a given set of {@link JexlContext} variables.&lt;/p&gt;<a name="line.26"></a>
+<FONT color="green">027</FONT>     * &lt;p&gt;A script is a group of statements, separated by semicolons.&lt;/p&gt;<a name="line.27"></a>
+<FONT color="green">028</FONT>     * &lt;p&gt;The statements can be &lt;code&gt;blocks&lt;/code&gt; (curly braces containing code),<a name="line.28"></a>
+<FONT color="green">029</FONT>     * Control statements such as &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt;<a name="line.29"></a>
+<FONT color="green">030</FONT>     * as well as expressions and assignment statements.&lt;/p&gt;<a name="line.30"></a>
+<FONT color="green">031</FONT>     *  <a name="line.31"></a>
+<FONT color="green">032</FONT>     * @since 1.1<a name="line.32"></a>
+<FONT color="green">033</FONT>     */<a name="line.33"></a>
+<FONT color="green">034</FONT>    public interface Script {<a name="line.34"></a>
+<FONT color="green">035</FONT>        /**<a name="line.35"></a>
+<FONT color="green">036</FONT>         * Executes the script with the variables contained in the<a name="line.36"></a>
+<FONT color="green">037</FONT>         * supplied {@link JexlContext}. <a name="line.37"></a>
+<FONT color="green">038</FONT>         * <a name="line.38"></a>
+<FONT color="green">039</FONT>         * @param context A JexlContext containing variables.<a name="line.39"></a>
+<FONT color="green">040</FONT>         * @return The result of this script, usually the result of <a name="line.40"></a>
+<FONT color="green">041</FONT>         *      the last statement.<a name="line.41"></a>
+<FONT color="green">042</FONT>         */<a name="line.42"></a>
+<FONT color="green">043</FONT>        Object execute(JexlContext context);<a name="line.43"></a>
+<FONT color="green">044</FONT>    <a name="line.44"></a>
+<FONT color="green">045</FONT>        /**<a name="line.45"></a>
+<FONT color="green">046</FONT>         * Executes the script with the variables contained in the<a name="line.46"></a>
+<FONT color="green">047</FONT>         * supplied {@link JexlContext} and a set of arguments corresponding to the<a name="line.47"></a>
+<FONT color="green">048</FONT>         * parameters used during parsing.<a name="line.48"></a>
+<FONT color="green">049</FONT>         * <a name="line.49"></a>
+<FONT color="green">050</FONT>         * @param context A JexlContext containing variables.<a name="line.50"></a>
+<FONT color="green">051</FONT>         * @param args the arguments<a name="line.51"></a>
+<FONT color="green">052</FONT>         * @return The result of this script, usually the result of <a name="line.52"></a>
+<FONT color="green">053</FONT>         *      the last statement.<a name="line.53"></a>
+<FONT color="green">054</FONT>         * @since 2.1<a name="line.54"></a>
+<FONT color="green">055</FONT>         */<a name="line.55"></a>
+<FONT color="green">056</FONT>        Object execute(JexlContext context, Object... args);<a name="line.56"></a>
+<FONT color="green">057</FONT>    <a name="line.57"></a>
+<FONT color="green">058</FONT>        /**<a name="line.58"></a>
+<FONT color="green">059</FONT>         * Returns the text of this Script.<a name="line.59"></a>
+<FONT color="green">060</FONT>         * @return The script to be executed.<a name="line.60"></a>
+<FONT color="green">061</FONT>         */<a name="line.61"></a>
+<FONT color="green">062</FONT>        String getText();<a name="line.62"></a>
+<FONT color="green">063</FONT>    <a name="line.63"></a>
+<FONT color="green">064</FONT>        /**<a name="line.64"></a>
+<FONT color="green">065</FONT>         * Gets this script parameters.<a name="line.65"></a>
+<FONT color="green">066</FONT>         * @return the parameters or null<a name="line.66"></a>
+<FONT color="green">067</FONT>         * @since 2.1<a name="line.67"></a>
+<FONT color="green">068</FONT>         */<a name="line.68"></a>
+<FONT color="green">069</FONT>        String[] getParameters();<a name="line.69"></a>
+<FONT color="green">070</FONT>    <a name="line.70"></a>
+<FONT color="green">071</FONT>        /**<a name="line.71"></a>
+<FONT color="green">072</FONT>         * Gets this script local variables.<a name="line.72"></a>
+<FONT color="green">073</FONT>         * @return the local variables or null<a name="line.73"></a>
+<FONT color="green">074</FONT>         * @since 2.1<a name="line.74"></a>
+<FONT color="green">075</FONT>         */<a name="line.75"></a>
+<FONT color="green">076</FONT>        String[] getLocalVariables();<a name="line.76"></a>
+<FONT color="green">077</FONT>    <a name="line.77"></a>
+<FONT color="green">078</FONT>        /**<a name="line.78"></a>
+<FONT color="green">079</FONT>         * Gets this script variables.<a name="line.79"></a>
+<FONT color="green">080</FONT>         * &lt;p&gt;Note that since variables can be in an ant-ish form (ie foo.bar.quux), each variable is returned as <a name="line.80"></a>
+<FONT color="green">081</FONT>         * a list of strings where each entry is a fragment of the variable ({"foo", "bar", "quux"} in the example.&lt;/p&gt;<a name="line.81"></a>
+<FONT color="green">082</FONT>         * @return the variables or null<a name="line.82"></a>
+<FONT color="green">083</FONT>         * @since 2.1<a name="line.83"></a>
+<FONT color="green">084</FONT>         */<a name="line.84"></a>
+<FONT color="green">085</FONT>        Set&lt;List&lt;String&gt;&gt; getVariables();<a name="line.85"></a>
+<FONT color="green">086</FONT>    <a name="line.86"></a>
+<FONT color="green">087</FONT>        /**<a name="line.87"></a>
+<FONT color="green">088</FONT>         * Creates a Callable from this script.<a name="line.88"></a>
+<FONT color="green">089</FONT>         * &lt;p&gt;This allows to submit it to an executor pool and provides support for asynchronous calls.&lt;/p&gt;<a name="line.89"></a>
+<FONT color="green">090</FONT>         * &lt;p&gt;The interpreter will handle interruption/cancellation gracefully if needed.&lt;/p&gt;<a name="line.90"></a>
+<FONT color="green">091</FONT>         * @param context the context<a name="line.91"></a>
+<FONT color="green">092</FONT>         * @return the callable<a name="line.92"></a>
+<FONT color="green">093</FONT>         * @since 2.1<a name="line.93"></a>
+<FONT color="green">094</FONT>         */<a name="line.94"></a>
+<FONT color="green">095</FONT>        Callable&lt;Object&gt; callable(JexlContext context);<a name="line.95"></a>
+<FONT color="green">096</FONT>    <a name="line.96"></a>
+<FONT color="green">097</FONT>        /**<a name="line.97"></a>
+<FONT color="green">098</FONT>         * Creates a Callable from this script.<a name="line.98"></a>
+<FONT color="green">099</FONT>         * &lt;p&gt;This allows to submit it to an executor pool and provides support for asynchronous calls.&lt;/p&gt;<a name="line.99"></a>
+<FONT color="green">100</FONT>         * &lt;p&gt;The interpreter will handle interruption/cancellation gracefully if needed.&lt;/p&gt;<a name="line.100"></a>
+<FONT color="green">101</FONT>         * @param context the context<a name="line.101"></a>
+<FONT color="green">102</FONT>         * @param args the script arguments<a name="line.102"></a>
+<FONT color="green">103</FONT>         * @return the callable<a name="line.103"></a>
+<FONT color="green">104</FONT>         * @since 2.1<a name="line.104"></a>
+<FONT color="green">105</FONT>         */<a name="line.105"></a>
+<FONT color="green">106</FONT>        Callable&lt;Object&gt; callable(JexlContext context, Object... args);<a name="line.106"></a>
+<FONT color="green">107</FONT>    }<a name="line.107"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

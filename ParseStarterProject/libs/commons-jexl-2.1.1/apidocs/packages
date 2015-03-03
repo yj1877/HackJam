@@ -1,0 +1,6 @@
+org.apache.commons.jexl2
+org.apache.commons.jexl2.internal
+org.apache.commons.jexl2.internal.introspection
+org.apache.commons.jexl2.introspection
+org.apache.commons.jexl2.parser
+org.apache.commons.jexl2.scripting

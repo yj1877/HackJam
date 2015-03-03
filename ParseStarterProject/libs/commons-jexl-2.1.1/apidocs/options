@@ -1,0 +1,32 @@
+-classpath
+'D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/target/classes;D:/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar;D:/repository/org/apache/bsf/bsf-api/3.1/bsf-api-3.1.jar'
+-encoding
+'iso-8859-1'
+-protected
+-quiet
+-source
+'1.5'
+-sourcepath
+'D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/src/main/java;D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/target/generated-sources/java;D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/target/generated-sources/jjtree'
+-author
+-bottom
+'Copyright &#169; 2001-2011 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All Rights Reserved.'
+-charset
+'iso-8859-1'
+-d
+'D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/target/site/apidocs'
+-docencoding
+'iso-8859-1'
+-doctitle
+'Commons JEXL 2.1.1 API'
+-link
+'http://download.oracle.com/javase/6/docs/api'
+-link
+'http://download.oracle.com/javaee/6/api'
+-linkoffline
+'http://download.oracle.com/javase/1.5.0/docs/api' 'D:/eclipseworkspaces/main/COMMONS_JEXL_2_1_1-RC1/target/javadoc-bundle-options'
+-linksource
+-use
+-version
+-windowtitle
+'Commons JEXL 2.1.1 API'

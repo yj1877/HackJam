@@ -1,4 +1,8 @@
 /Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/classes/debug
+/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-c0137a9b163742eb721a7e2143e71a4b5161b4e5.jar
 /Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-e61c447e3db50618f14408cc93f436ba736e6650.jar
 /Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.8.2-c63c360b33c6b146a18aed2b9bbf27cde4acb9d0.jar
+/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-d2c27a9e4a4701f8d968f508745a95bc564a5fe1.jar
 /Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.8.2-fde4348177bf9a7c71a68585f92f656ceb6b4389.jar
+/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-3e07c95def1dd4d8181cc6716e9f73ff03a1df8c.jar
+/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-4fff5b3f9b3a963d54c2aa78243cc779ca68645b.jar

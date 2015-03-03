@@ -4,13 +4,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="USERNAME"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
     <EditText
         android:layout_width="373dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="username"
         android:ems="10"
         android:id="@+id/username_editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PASSWORD"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal" />
 
     <EditText
         android:layout_width="355dp"
@@ -22,14 +37,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="SIGN IN"
         android:id="@+id/login_button"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="SIGN UP"
         android:id="@+id/register_button"
         android:layout_gravity="center_horizontal" />
 

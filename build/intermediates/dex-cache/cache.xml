@@ -2,6 +2,34 @@
 <items version="2" >
 
     <item
+        jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-3e07c95def1dd4d8181cc6716e9f73ff03a1df8c.jar" />
+    </item>
+    <item
+        jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-d2c27a9e4a4701f8d968f508745a95bc564a5fe1.jar" />
+    </item>
+    <item
+        jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-4fff5b3f9b3a963d54c2aa78243cc779ca68645b.jar" />
+    </item>
+    <item
+        jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/libs/Parse-1.8.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="c2cb0bfe37cbefd855b6faa3c9a5be833aba7300">
+        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.8.2-fde4348177bf9a7c71a68585f92f656ceb6b4389.jar" />
+    </item>
+    <item
         jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/libs/ParseCrashReporting-1.8.2.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -16,11 +44,11 @@
         <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-e61c447e3db50618f14408cc93f436ba736e6650.jar" />
     </item>
     <item
-        jar="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/libs/Parse-1.8.2.jar"
+        jar="/Users/mac/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="c2cb0bfe37cbefd855b6faa3c9a5be833aba7300">
-        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.8.2-fde4348177bf9a7c71a68585f92f656ceb6b4389.jar" />
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/Users/mac/Documents/Spring2015/HackJam/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-c0137a9b163742eb721a7e2143e71a4b5161b4e5.jar" />
     </item>
 
 </items>

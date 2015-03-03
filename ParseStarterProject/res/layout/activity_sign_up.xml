@@ -30,7 +30,7 @@
         android:layout_alignEnd="@+id/textPerson_editText" />
 
     <EditText
-        android:hint="Password again"
+        android:hint="Confirm Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -49,7 +49,7 @@
         android:layout_below="@+id/textPassword_editText3"
         android:layout_alignRight="@+id/password_confirmation"
         android:layout_alignEnd="@+id/password_confirmation"
-        android:hint="email" />
+        android:hint="Email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/phone_editText"
-        android:hint="phone"
+        android:hint="Phone Number"
         android:layout_below="@+id/email_editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -65,11 +65,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="REGISTER"
         android:id="@+id/signup_button"
-        android:layout_below="@+id/phone_editText"
-        android:layout_alignRight="@+id/email_editText"
-        android:layout_alignEnd="@+id/email_editText" />
+        android:layout_below="@+id/password_confirmation"
+        android:layout_alignRight="@+id/phone_editText"
+        android:layout_alignEnd="@+id/phone_editText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,4 +78,14 @@
         android:id="@+id/password_confirmation"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/textPerson_editText"
+        android:layout_alignRight="@+id/password_confirmation"
+        android:layout_alignEnd="@+id/password_confirmation" />
 </RelativeLayout>
